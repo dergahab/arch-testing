@@ -6,7 +6,7 @@
         "laravel/framework": "^10.0"
     },
     "require-dev": {
-       "dergahab/arch-testing": "*",
+        "dergahab/arch-testing": "*",
         "pestphp/pest": "^2.35"
     },
     "autoload": {
@@ -20,7 +20,7 @@
     },
     "repositories": [
         {
-           "type": "vcs",
+            "type": "vcs",
             "url": "https://github.com/dergahab/arch-testing.git"
         }
     ],
@@ -38,6 +38,6 @@
             "name": "Dergah"
         }
     ],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
