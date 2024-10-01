@@ -1,37 +1,23 @@
 {
-    "name": "laravel/project",
-    "description": "Laravel Project",
+    "name": "dergahab/arch-testing",
+    "description": "Architecture testing",
+    "type": "library",
     "require": {
-        "php": "^8.1",
-        "laravel/framework": "^10.0"
-    },
-    "require-dev": {
-        "dergahab/arch-testing": "*",
         "pestphp/pest": "^2.35"
     },
+    "require-dev": {
+        "pestphp/pest": "^2.35"
+    },
+    "license": "MIT",
     "autoload": {
         "psr-4": {
-            "App\\": "app/"
-        },
-        "classmap": [
-            "database/seeders",
-            "database/factories"
-        ]
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "https://github.com/dergahab/arch-testing.git"
+            "DargahAh\\Packages\\": "src/"
         }
-    ],
-    "scripts": {
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
-        ],
-        "test": [
-            "./vendor/bin/pest"
-        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DargahAh\\Packages\\Tests\\": "tests/"
+        }
     },
     "authors": [
         {
@@ -39,5 +25,22 @@
         }
     ],
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/dergahab/arch-testing.git"
+        }
+    ],
+    "scripts": {
+        "post-install-cmd": [
+            "vendor/bin/pest"
+        ],
+        "post-update-cmd": [
+            "vendor/bin/pest"
+        ],
+        "test": [
+            "./vendor/bin/pest"
+        ]
+    }
 }
