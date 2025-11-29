@@ -6,7 +6,8 @@
         "pestphp/pest": "^2.35"
     },
     "require-dev": {
-        "pestphp/pest": "^2.35"
+        "pestphp/pest": "^2.35",
+        "orchestra/testbench": "^8.0"
     },
     "license": "MIT",
     "autoload": {
